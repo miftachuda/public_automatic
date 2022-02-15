@@ -18,8 +18,5 @@
     "moment": "^2.29.1",
     "progress": "^2.0.3",
     "qs": "^6.10.2"
-  },
-  "devDependencies": {
-    "javascript-obfuscator": "^3.2.6"
   }
 }
