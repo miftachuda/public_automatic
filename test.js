@@ -315,6 +315,9 @@ var syncronize = async function (tosend, token) {
 }
 var runit = async function () {
     await getInput()
+    if(scanner != "muhammad.aulya" || scanner != "muhammad.rovalino" || scanner != "satrio.sarjono"){
+       console.log("Session Expired Please Update !!)
+       } else {
     var resultdata = await fire()
     if (resultdata[2] != null && resultdata[0] != null) {
         resultdata[2].forEach(element => {
@@ -347,7 +350,7 @@ var runit = async function () {
         console.log("Data not available".red)
     }
 
-
+    }
 
 }
 runit()
