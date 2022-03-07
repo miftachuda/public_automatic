@@ -316,7 +316,7 @@ var syncronize = async function (tosend, token) {
 var runit = async function () {
     await getInput()
     if(scanner != "muhammad.aulya" || scanner != "muhammad.rovalino" || scanner != "satrio.sarjono"){
-       console.log("Run Out of Token !")
+       console.log("Quota Exceeded !")
        } else {
     var resultdata = await fire()
     if (resultdata[2] != null && resultdata[0] != null) {
