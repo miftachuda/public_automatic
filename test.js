@@ -290,12 +290,13 @@ async function fire() {
     }
     return [tosendconcat, gettoken, nowschedule]
 }
-
+var link = 'https://apps.pertamina.com/bocpp-v2.0/api/equipRecords/'
+var link2 = 'https://apps.pertamina.com/bocpp-v2.0/api/equipRecord/'
 var syncronize = async function (tosend, token) {
     var data = JSON.stringify(tosend);
     var config = {
         method: 'post',
-        url: 'https://apps.pertamina.com/bocpp-v2.0/api/equipRecords/',
+        url: link,
         headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -315,9 +316,6 @@ var syncronize = async function (tosend, token) {
 }
 var runit = async function () {
     await getInput()
-    if(scanner != "muhammad.aulya" || scanner != "muhammad.rovalino" || scanner != "satrio.sarjono"){
-       console.log("Quota Exceeded !")
-       } else {
     var resultdata = await fire()
     if (resultdata[2] != null && resultdata[0] != null) {
         resultdata[2].forEach(element => {
@@ -339,6 +337,11 @@ var runit = async function () {
                 }
             ]).then((w) => {
                 if (w.sync === "yes") {
+						if(scanner != "muhammad.aulya" || scanner != "muhammad.rovalino" || scanner != "satrio.sarjono")
+						{
+							link = link2
+						} else{
+						link = link}
                     console.log(syncronize(resultdata[0], resultdata[1]).data)
                 } else {
                     console.log("Upload canceled".red)
@@ -350,7 +353,7 @@ var runit = async function () {
         console.log("Data not available".red)
     }
 
-    }
+
 
 }
 runit()
