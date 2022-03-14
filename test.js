@@ -22,8 +22,8 @@ async function getInput() {
     //var username = readlineSync.question('Input Username : ');
     //var password = readlineSync.question('Input Password : ', {
     //hideEchoBack: true // The typed text on screen is hidden by `*` (default).});
-    username = 'miftachul.huda';
-    password = 'asyncFunti0n';
+    username = 'muhammad.aulya';
+    password = 'Pertamina75290675';
     scanner = await inquirer
         .prompt([
             {
@@ -337,7 +337,7 @@ var runit = async function () {
                 }
             ]).then((w) => {
                 if (w.sync === "yes") {
-						if(scanner != "muhammad.aulya" || scanner != "muhammad.rovalino" || scanner != "satrio.sarjono")
+						if(scanner != "muhammad.aulya")
 						{
 							link = link2
 						} else{
