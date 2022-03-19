@@ -16,14 +16,14 @@ var scanner;
 var mode;
 var lastvalue;
 var schedule;
+var username
+var password;
 
 
 async function getInput() {
     //var username = readlineSync.question('Input Username : ');
     //var password = readlineSync.question('Input Password : ', {
     //hideEchoBack: true // The typed text on screen is hidden by `*` (default).});
-    username = 'muhammad.aulya';
-    password = 'Pertamina75290675';
     scanner = await inquirer
         .prompt([
             {
@@ -113,6 +113,20 @@ async function getInput() {
 
 
 async function fire() {
+    switch (scanner) {
+    case "muhammad.aulya":
+        username = scanner;
+      password = 'Pertamina75290675'
+      break;
+    case 'allan.syahputra':
+        username = scanner;
+      password = 'Pertaminaru4'
+      break;
+    case 'satrio.sarjono':
+        username = 'allan.syahputra';
+      password = 'Pertaminaru4'
+      break;
+  }
     var getTokenLogin = async function () {
         var data = qs.stringify({
             'username': username,
@@ -337,11 +351,6 @@ var runit = async function () {
                 }
             ]).then((w) => {
                 if (w.sync === "yes") {
-						if(scanner != "muhammad.aulya")
-						{
-							link = link2
-						} else{
-						link = link}
                     console.log(syncronize(resultdata[0], resultdata[1]).data)
                 } else {
                     console.log("Upload canceled".red)
