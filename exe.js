@@ -1,3 +1,5 @@
+//untuk satu user pass
+
 const fs = require('fs/promises');
 const lodash = require("lodash")
 const moment = require("moment")

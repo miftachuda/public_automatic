@@ -114,19 +114,19 @@ async function getInput() {
 
 async function fire() {
     switch (scanner) {
-    case "muhammad.aulya":
-        username = scanner;
-      password = 'Pertamina75290675'
-      break;
-    case 'allan.syahputra':
-        username = scanner;
-      password = 'Pertaminaru4'
-      break;
-    case 'satrio.sarjono':
-        username = 'allan.syahputra';
-      password = 'Pertaminaru4'
-      break;
-  }
+        case "muhammad.aulya":
+            username = scanner;
+            password = 'Pertamina752906752'
+            break;
+        case 'allan.syahputra':
+            username = scanner;
+            password = 'Pertaminaru4'
+            break;
+        case 'satrio.sarjono':
+            username = 'allan.syahputra';
+            password = 'Pertaminaru4'
+            break;
+    }
     var getTokenLogin = async function () {
         var data = qs.stringify({
             'username': username,
